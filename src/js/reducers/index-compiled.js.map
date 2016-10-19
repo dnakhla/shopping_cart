@@ -1,1 +1,0 @@
-{"version":3,"sources":["index.js"],"names":[],"mappings":";;;;;;AAAA;;AAEA;;;;AACA;;;;;;kBAEe,4BAAgB;AAC7B;;AAD6B,CAAhB,C","file":"index-compiled.js","sourcesContent":["import { combineReducers } from 'redux'\n\nimport basket from './basketReducer'\nimport product from './productReducer'\n\nexport default combineReducers({\n  basket\n  // product\n})"]}

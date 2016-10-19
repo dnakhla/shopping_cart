@@ -10,4 +10,5 @@ export default function reducer(state={
       return {...state}
     }
   }
+  return state;
 }

@@ -1,4 +1,7 @@
-export default function reducer(state, action) {
+export default function reducer(state={
+  basket: [],
+  error: null
+}, action) {
   switch (action.type) {
     case 'ADD_PRODUCT': {
       return {...state}
@@ -7,4 +10,6 @@ export default function reducer(state, action) {
       return {...state}
     }
   }
+
+  return state
 }
