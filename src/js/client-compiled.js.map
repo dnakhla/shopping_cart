@@ -1,0 +1,1 @@
+{"version":3,"sources":["client.js"],"names":[],"mappings":";;AAAA;;;;AACA;;;;AAEA;;;;;;AAEA,IAAM,MAAM,SAAS,cAAT,CAAwB,KAAxB,CAAZ;;AAEA,mBAAS,MAAT","file":"client-compiled.js","sourcesContent":["import React from 'react'\nimport ReactDOM from 'react-dom'\n\nimport Layout from './components/Layout'\n\nconst app = document.getElementById('app');\n\nReactDOM.render()"]}
