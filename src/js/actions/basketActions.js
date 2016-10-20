@@ -1,8 +1,8 @@
-export function addProduct(id) {
+export function addProduct(product) {
   return {
     type: 'ADD_PRODUCT',
     payload: {
-      id: 'an ID'
+      product: product
     }
   }
 }
