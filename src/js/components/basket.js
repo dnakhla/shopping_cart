@@ -1,8 +1,10 @@
 import React from "react";
 import {connect} from 'react-redux'
 
-import {addProduct} from '../actions/basketActions';
-import {loadProducts} from '../actions/loadActions';
+import Total from './total'
+import Clear from './clear'
+
+import {removeProduct} from '../actions/basketActions';
 
 @connect((store) => {
   return {
@@ -11,13 +13,11 @@ import {loadProducts} from '../actions/loadActions';
 })
 export default class productList extends React.Component {
   componentDidMount() {
-    console.log('will mount');
-    this.props.dispatch(loadProducts())
   }
 
   removeFromBasket(product) {
     console.log(product)
-    // this.props.dispatch(addProduct(product))
+    this.props.dispatch(removeProduct(product))
   }
 
   addToBasket(product) {
@@ -31,8 +31,9 @@ export default class productList extends React.Component {
       mappedBasket = basket.map(product => {
         return <tr key={product.id}>
           <td>{product.name}</td>
+          <td>{product.quantity}</td>
           <td>
-            <button class="btn btn-danger btn-block" type="submit" onClick={this.removeFromBasket.bind(this)}>
+            <button class="btn btn-danger btn-block" type="submit" onClick={this.removeFromBasket.bind(this, {product})}>
               <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
             </button>
           </td>
@@ -45,12 +46,19 @@ export default class productList extends React.Component {
         <thead>
         <tr>
           <td>Item</td>
+          <td>Quantity</td>
           <td>Remove</td>
         </tr>
         </thead>
         <tbody>
         {mappedBasket}
         </tbody>
+        <tfoot>
+          <tr>
+            <Total />
+            <Clear />
+          </tr>
+        </tfoot>
       </table>
     </div>
   }

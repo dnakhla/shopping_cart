@@ -7,11 +7,11 @@ export function addProduct(product) {
   }
 }
 
-export function removeProduct(id) {
+export function removeProduct(prod) {
   return {
     type: 'REMOVE_PRODUCT',
     payload: {
-      id: id
+      prod: prod
     }
   }
 }

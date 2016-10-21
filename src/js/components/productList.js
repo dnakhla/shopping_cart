@@ -24,11 +24,12 @@ export default class productList extends React.Component {
     let mappedProducts;
     if (products) {
       mappedProducts = products.map(product => {
-        if (product.quantity !== 0) {
+        if (product.stock !== 0) {
           return <tr key={product.id}>
             <td>{product.id}</td>
             <td>{product.name}</td>
-            <td>{product.quantity}</td>
+            <td>{product.cat}</td>
+            <td>{product.stock}</td>
             <td>
               <button class="btn btn-default btn-block" type="submit" onClick={this.addToBasket.bind(this, {product})}>
                 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
@@ -39,7 +40,8 @@ export default class productList extends React.Component {
           return <tr key={product.id}>
             <td>{product.id}</td>
             <td>{product.name}</td>
-            <td>{product.quantity}</td>
+            <td>{product.cat}</td>
+            <td>{product.stock}</td>
             <td>
               <button class="btn btn-default btn-block" disabled="disabled" type="submit">
                 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
@@ -57,6 +59,7 @@ export default class productList extends React.Component {
             <tr>
               <td>#</td>
               <td>Product</td>
+              <td>Category</td>
               <td>Quantity</td>
               <td><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></td>
             </tr>
