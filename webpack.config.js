@@ -5,7 +5,10 @@ var webpack = require('webpack');
 module.exports = {
   entry: './src/js/client.js',
   devtool: debug ? "inline-sourcemap" : null,
-  output: {path: __dirname, filename: 'build/bundle.js'},
+  output: {
+    path: __dirname + "/build/",
+    filename: "bundle.js"
+  },
   module: {
     loaders: [
       {
