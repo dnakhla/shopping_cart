@@ -18,7 +18,6 @@ export function removeProduct(prod) {
 
 export function clearBasket() {
   return {
-    type: 'CLEAR_BASKET',
-    payload: ''
+    type: 'CLEAR_BASKET'
   }
 }

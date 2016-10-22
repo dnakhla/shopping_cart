@@ -5,6 +5,7 @@ const products = [
     cat: 'Women’s Footwear',
     price: 99,
     discountedPrice: 0,
+    originalStock: 5,
     stock: 5
   },
   {
@@ -13,6 +14,7 @@ const products = [
     cat: 'Women’s Footwear',
     price: 42.00,
     discountedPrice: 0,
+    originalStock: 4,
     stock: 4
   },
   {
@@ -21,6 +23,7 @@ const products = [
     cat: 'Men’s Footwear ',
     price: 34.00,
     discountedPrice: 0,
+    originalStock: 12,
     stock: 12
   },
   {
@@ -29,6 +32,7 @@ const products = [
     cat: 'Men’s Footwear',
     price: 19.00,
     discountedPrice: 0,
+    originalStock: 6,
     stock: 6
   },
   {
@@ -37,6 +41,7 @@ const products = [
     cat: 'Men’s Footwear',
     price: 19.00,
     discountedPrice: 0,
+    originalStock: 0,
     stock: 0
   },
   {
@@ -45,6 +50,7 @@ const products = [
     cat: 'Women’s Casualwear',
     price: 167.00,
     discountedPrice: 0,
+    originalStock: 6,
     stock: 6
   },
   {
@@ -53,6 +59,7 @@ const products = [
     cat: 'Women’s Casualwear',
     price: 30.00,
     discountedPrice: 0,
+    originalStock: 5,
     stock: 5
   },
   {
@@ -61,6 +68,7 @@ const products = [
     cat: 'Men’s Casualwear',
     price: 49.99,
     discountedPrice: 0,
+    originalStock: 9,
     stock: 9
   },
   {
@@ -69,6 +77,7 @@ const products = [
     cat: 'Men’s Casualwear',
     price: 49.99,
     discountedPrice: 39.99,
+    originalStock: 3,
     stock: 3
   },
   {
@@ -77,6 +86,7 @@ const products = [
     cat: 'Men’s Formalwear',
     price: 75.00,
     discountedPrice: 0,
+    originalStock: 2,
     stock: 2
   },
   {
@@ -85,6 +95,7 @@ const products = [
     cat: 'Men’s Formalwear',
     price: 175.50,
     discountedPrice: 0,
+    originalStock: 1,
     stock: 1
   },
   {
@@ -93,6 +104,7 @@ const products = [
     cat: 'Women’s Formalwear',
     price: 270.00,
     discountedPrice: 0,
+    originalStock: 10,
     stock: 10
   },
   {
@@ -101,6 +113,7 @@ const products = [
     cat: 'Women’s Formalwear',
     price: 540.00,
     discountedPrice: 0,
+    originalStock: 5,
     stock: 5
   },
 ];

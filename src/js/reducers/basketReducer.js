@@ -1,6 +1,7 @@
 export default function reducer(state = {
   basket: [],
-  error: null
+  total: 0,
+  discountedTotal: 0
 }, action) {
   switch (action.type) {
     case 'ADD_PRODUCT': {
@@ -26,20 +27,36 @@ export default function reducer(state = {
       }
     }
     case 'REMOVE_PRODUCT': {
-      console.log('state.basket')
-      console.log(state.basket)
-      const selected = action.payload.prod.product.id;
-      console.log(selected)
-      let index = 0
-      state.basket.forEach((item, i) => {
-        console.log(item.id)
-        if (item.id === selected) {
-          index = i;
+      const newBasket = [...state.basket]
+      const item = action.payload.prod.product;
+      const id = item.id;
+
+      const itemIndex = newBasket.findIndex(product => product.id === id)
+      if (newBasket[itemIndex].quantity === 1) {
+        const newArray = newBasket.filter((obj) => {
+          return obj.id !== id
+        })
+        return {
+          ...state,
+          basket: newArray
         }
-      });
+      } else {
+        newBasket[itemIndex].quantity = newBasket[itemIndex].quantity - 1
+
+        return {
+          ...state,
+          basket: newBasket
+        }
+      }
+
+
+
+    }
+    case 'CLEAR_BASKET': {
+      console.log('clear')
       return {
         ...state,
-        basket: [...state.basket.slice(index, index)]
+        basket: []
       }
     }
   }

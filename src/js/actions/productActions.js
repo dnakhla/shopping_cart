@@ -14,3 +14,18 @@ export function reduceStock(product) {
     }
   }
 }
+
+export function addStock(product) {
+  return {
+    type: 'ADD_STOCK',
+    payload: {
+      id: product.product.id
+    }
+  }
+}
+
+export function resetStock() {
+  return {
+    type: 'RESET_STOCK'
+  }
+}

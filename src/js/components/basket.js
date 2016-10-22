@@ -5,6 +5,7 @@ import Total from './total'
 import Clear from './clear'
 
 import {removeProduct} from '../actions/basketActions';
+import {addStock} from '../actions/productActions';
 
 @connect((store) => {
   return {
@@ -16,8 +17,9 @@ export default class productList extends React.Component {
   }
 
   removeFromBasket(product) {
-    console.log(product)
     this.props.dispatch(removeProduct(product))
+    this.props.dispatch(addStock(product))
+
   }
 
   addToBasket(product) {

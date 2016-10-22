@@ -1,12 +1,20 @@
 import React from "react";
-import {loadProducts} from '../actions/productActions';
+import { connect } from "react-redux"
 
+import {resetStock} from '../actions/productActions';
+import {clearBasket} from '../actions/basketActions';
+
+@connect(() => {
+  return {};
+})
 export default class Total extends React.Component {
   componentDidMount() {
   }
 
   clear() {
-    this.props.dispatch(loadProducts())
+    this.props.dispatch(resetStock())
+    this.props.dispatch(clearBasket())
+
   }
 
   render() {

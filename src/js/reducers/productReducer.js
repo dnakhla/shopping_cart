@@ -30,6 +30,21 @@ export default function reducer(state={
       }
 
     }
+    case 'RESET_STOCK': {
+      const items = [...state.products]
+      const newItems = [];
+      items.map((item) => {
+        const obj = Object.assign({}, item)
+        obj.stock = obj.originalStock;
+        newItems.push(obj)
+      })
+
+      return {
+        ...state,
+        products: newItems
+      }
+
+    }
   }
   return state;
 }
