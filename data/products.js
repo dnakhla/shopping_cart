@@ -4,7 +4,7 @@ const products = [
     name: 'Almond Toe Court Shoes, Patent Black',
     cat: 'Women’s Footwear',
     price: 99,
-    discountedPrice: 0,
+    originalPrice: 99,
     originalStock: 5,
     stock: 5
   },
@@ -13,7 +13,7 @@ const products = [
     name: 'Suede Shoes, Blue',
     cat: 'Women’s Footwear',
     price: 42.00,
-    discountedPrice: 0,
+    originalPrice: 42.00,
     originalStock: 4,
     stock: 4
   },
@@ -22,7 +22,7 @@ const products = [
     name: 'Leather Driver Saddle Loafers, Tan',
     cat: 'Men’s Footwear ',
     price: 34.00,
-    discountedPrice: 0,
+    originalPrice: 34.00,
     originalStock: 12,
     stock: 12
   },
@@ -31,7 +31,7 @@ const products = [
     name: 'Flip Flops, Red',
     cat: 'Men’s Footwear',
     price: 19.00,
-    discountedPrice: 0,
+    originalPrice: 19.00,
     originalStock: 6,
     stock: 6
   },
@@ -40,7 +40,7 @@ const products = [
     name: 'Flip Flops, Blue',
     cat: 'Men’s Footwear',
     price: 19.00,
-    discountedPrice: 0,
+    originalPrice: 19.00,
     originalStock: 0,
     stock: 0
   },
@@ -49,7 +49,7 @@ const products = [
     name: 'Gold Button Cardigan, Black',
     cat: 'Women’s Casualwear',
     price: 167.00,
-    discountedPrice: 0,
+    originalPrice: 167.00,
     originalStock: 6,
     stock: 6
   },
@@ -58,7 +58,7 @@ const products = [
     name: 'Cotton Shorts, Medium Red',
     cat: 'Women’s Casualwear',
     price: 30.00,
-    discountedPrice: 0,
+    originalPrice: 30.00,
     originalStock: 5,
     stock: 5
   },
@@ -67,7 +67,7 @@ const products = [
     name: 'Fine Stripe Short Sleeve Shirt, Grey',
     cat: 'Men’s Casualwear',
     price: 49.99,
-    discountedPrice: 0,
+    originalPrice: 49.99,
     originalStock: 9,
     stock: 9
   },
@@ -75,8 +75,8 @@ const products = [
     id: 9,
     name: 'Fine Stripe Short Sleeve Shirt, Green',
     cat: 'Men’s Casualwear',
-    price: 49.99,
-    discountedPrice: 39.99,
+    price: 39.99,
+    originalPrice: 49.99,
     originalStock: 3,
     stock: 3
   },
@@ -85,7 +85,7 @@ const products = [
     name: 'Sharkskin Waistcoat, Charcoal',
     cat: 'Men’s Formalwear',
     price: 75.00,
-    discountedPrice: 0,
+    originalPrice: 75.00,
     originalStock: 2,
     stock: 2
   },
@@ -94,7 +94,7 @@ const products = [
     name: 'Lightweight Patch Pocket Blazer, Deer',
     cat: 'Men’s Formalwear',
     price: 175.50,
-    discountedPrice: 0,
+    originalPrice: 175.50,
     originalStock: 1,
     stock: 1
   },
@@ -103,7 +103,7 @@ const products = [
     name: 'Bird Print Dress, Black',
     cat: 'Women’s Formalwear',
     price: 270.00,
-    discountedPrice: 0,
+    originalPrice: 270.00,
     originalStock: 10,
     stock: 10
   },
@@ -112,7 +112,7 @@ const products = [
     name: 'Mid Twist Cut-Out Dress, Pink',
     cat: 'Women’s Formalwear',
     price: 540.00,
-    discountedPrice: 0,
+    originalPrice: 540.00,
     originalStock: 5,
     stock: 5
   },

@@ -1,7 +1,7 @@
 const discounts = [
   {
     code: '5off',
-    value: -5,
+    value: 5,
     conditions: {
       products: [],
       category: [],
@@ -10,7 +10,7 @@ const discounts = [
   },
   {
     code: 'over50',
-    value: -10,
+    value: 10,
     conditions: {
       products: [],
       category: [],
@@ -19,7 +19,7 @@ const discounts = [
   },
   {
     code: 'over75footwear',
-    value: -15,
+    value: 15,
     conditions: {
       products: [],
       category: ['footwear'],

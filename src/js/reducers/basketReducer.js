@@ -1,9 +1,17 @@
 export default function reducer(state = {
   basket: [],
   total: 0,
-  discountedTotal: 0
+  discountedTotal: 0,
+  discountApplied: false,
+  appliedDiscount: ''
 }, action) {
   switch (action.type) {
+    case 'LOAD_DISCOUNTS': {
+      return {
+        ...state,
+        discounts: action.payload
+      }
+    }
     case 'ADD_PRODUCT': {
       const id = action.payload.product.product.id
       const newBasket = [...state.basket]
@@ -57,6 +65,55 @@ export default function reducer(state = {
       return {
         ...state,
         basket: []
+      }
+    }
+    case 'CALC_TOTAL': {
+      const basket = [...state.basket];
+      let total = 0;
+      basket.map((item) => {
+        const value = item.price * item.quantity;
+        total = total + value;
+      })
+      if (total === basket.total) return {...state}
+      return {
+        ...state,
+        total: state.basket.total = parseFloat(total).toFixed(2)
+      }
+    }
+    case 'SET_CODE': {
+      return {
+        ...state,
+        voucherCode: action.payload.voucherCode
+      }
+    }
+    case 'APPLY_DISCOUNT': {
+      console.log('APPLY_DISCOUNT')
+      const discounts = [...state.discounts]
+      const voucherCode = state.voucherCode
+      const appliedDiscount = state.appliedDiscount
+      console.log(discounts)
+      let thisDiscount;
+      discounts.map((discount) => {
+        if (discount.code === voucherCode) {
+          thisDiscount = discount
+        }
+      })
+
+      if (thisDiscount) {
+        console.log(state.total)
+        console.log(thisDiscount.value)
+        const newDiscounted = parseFloat(state.total).toFixed(2) - thisDiscount.value
+        return {
+          ...state,
+          appliedDiscount: true,
+          discountedTotal: parseFloat(newDiscounted).toFixed(2)
+        }
+      }
+
+      return {
+        ...state,
+        appliedDiscount: false,
+        discountedTotal: state.total
       }
     }
   }

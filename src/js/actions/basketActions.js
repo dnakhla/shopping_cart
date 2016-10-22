@@ -1,3 +1,11 @@
+import discounts from '../../../data/discounts'
+export function loadDiscounts() {
+  return {
+    type: 'LOAD_DISCOUNTS',
+    payload: discounts
+  }
+}
+
 export function addProduct(product) {
   return {
     type: 'ADD_PRODUCT',
@@ -21,3 +29,26 @@ export function clearBasket() {
     type: 'CLEAR_BASKET'
   }
 }
+
+export function calcTotal() {
+  return {
+    type: 'CALC_TOTAL'
+  }
+}
+
+export function setVoucher() {
+  return {
+    type: 'SET_CODE',
+    payload: {
+      voucherCode: 'over50'
+    }
+  }
+}
+
+export function applyDiscount() {
+  return {
+    type: 'APPLY_DISCOUNT'
+  }
+}
+
+

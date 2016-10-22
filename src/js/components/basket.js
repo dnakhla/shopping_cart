@@ -1,41 +1,36 @@
 import React from "react";
 import {connect} from 'react-redux'
 
-import Total from './total'
-import Clear from './clear'
+import Status from './status'
 
-import {removeProduct} from '../actions/basketActions';
+import {removeProduct, calcTotal, loadDiscounts, applyDiscount} from '../actions/basketActions';
 import {addStock} from '../actions/productActions';
-
 @connect((store) => {
   return {
-    basket: store.basket.basket
+    basket: store.basket
   }
 })
-export default class productList extends React.Component {
+export default class basket extends React.Component {
   componentDidMount() {
+    this.props.dispatch(loadDiscounts())
   }
-
   removeFromBasket(product) {
     this.props.dispatch(removeProduct(product))
     this.props.dispatch(addStock(product))
-
-  }
-
-  addToBasket(product) {
-    this.props.dispatch(addProduct(product))
+    this.props.dispatch(calcTotal())
+    this.props.dispatch(applyDiscount())
   }
 
   render() {
     const {basket} = this.props;
     let mappedBasket
     if (basket) {
-      mappedBasket = basket.map(product => {
+      mappedBasket = basket.basket.map(product => {
         return <tr key={product.id}>
           <td>{product.name}</td>
           <td>{product.quantity}</td>
           <td>
-            <button class="btn btn-danger btn-block" type="submit" onClick={this.removeFromBasket.bind(this, {product})}>
+            <button class="btn btn-danger btn-block btn-block" type="submit" onClick={this.removeFromBasket.bind(this, {product})}>
               <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
             </button>
           </td>
@@ -55,13 +50,8 @@ export default class productList extends React.Component {
         <tbody>
         {mappedBasket}
         </tbody>
-        <tfoot>
-          <tr>
-            <Total />
-            <Clear />
-          </tr>
-        </tfoot>
       </table>
+      <Status />
     </div>
   }
 }

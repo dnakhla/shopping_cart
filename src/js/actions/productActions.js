@@ -1,4 +1,5 @@
 import items from '../../../data/products'
+
 export function loadProducts() {
   return {
     type: 'LOAD_PRODUCTS',
