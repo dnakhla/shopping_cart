@@ -2,21 +2,21 @@ import React from "react";
 import {connect} from 'react-redux'
 
 import {addProduct} from '../actions/basketActions';
-import {loadProducts} from '../actions/loadActions';
+import {loadProducts, reduceStock} from '../actions/productActions';
 
 @connect((store) => {
   return {
-    products: store.load.load
+    products: store.product.products
   }
 })
 export default class productList extends React.Component {
   componentDidMount() {
-    console.log('will mount');
     this.props.dispatch(loadProducts())
   }
 
   addToBasket(product) {
     this.props.dispatch(addProduct(product))
+    this.props.dispatch(reduceStock(product))
   }
 
   render() {

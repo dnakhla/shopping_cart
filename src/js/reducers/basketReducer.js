@@ -4,20 +4,18 @@ export default function reducer(state = {
 }, action) {
   switch (action.type) {
     case 'ADD_PRODUCT': {
+      const id = action.payload.product.product.id
+      const newBasket = [...state.basket]
+      const itemIndex = newBasket.findIndex(product => product.id === id)
+
       const prod = action.payload.product.product;
+      let foundItem = false;
+      if (itemIndex !== -1) foundItem = true;
 
-      let index;
-      state.basket.forEach((item, i) => {
-        if (item.id === prod.id) {
-          index = i;
-        }
-      })
-
-      if (index) {
-        console.log(state.basket[index].quantity)
+      if (foundItem) {
         return {
           ...state,
-          basket: [...state.basket, ...state.basket[index].quantity++ ]
+          basket: [...state.basket, ...state.basket[itemIndex].quantity++ ]
         }
       } else {
         prod.quantity = 1;
