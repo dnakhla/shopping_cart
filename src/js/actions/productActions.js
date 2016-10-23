@@ -1,5 +1,8 @@
-import items from '../../../data/products'
+import items from '../../../data/products' // imports discounts from data folder
 
+/**
+ * List of exported actions which once triggered will pass payload to reducer dependent on type
+ */
 export function loadProducts() {
   return {
     type: 'LOAD_PRODUCTS',

@@ -1,28 +1,43 @@
 import React from "react";
 import {connect} from 'react-redux'
 
-import Status from './status'
+import Status from './status' // Status Component - contains total and dscounts
 
+/**
+ * Importing methods to be used within component
+ */
 import {removeProduct, calcTotal, loadDiscounts, applyDiscount} from '../actions/basketActions';
 import {addStock} from '../actions/productActions';
+
+/**
+ * Give component access to store
+ */
 @connect((store) => {
   return {
     basket: store.basket
   }
 })
 export default class basket extends React.Component {
+  /**
+   * when component mounts - load discounts
+   */
   componentDidMount() {
     this.props.dispatch(loadDiscounts())
   }
+
+  /**
+   * Remove item from basket
+   * @param product {object} product object which was clicked
+   */
   removeFromBasket(product) {
-    this.props.dispatch(removeProduct(product))
-    this.props.dispatch(addStock(product))
-    this.props.dispatch(calcTotal())
-    this.props.dispatch(applyDiscount())
+    this.props.dispatch(removeProduct(product)) // removed product from basket
+    this.props.dispatch(addStock(product)) // adds stock count back to product list
+    this.props.dispatch(calcTotal()) // calculate total of basket
+    this.props.dispatch(applyDiscount()) // re-apply discounts
   }
 
   render() {
-    const {basket} = this.props;
+    const {basket} = this.props; // init basket from state
     let mappedBasket
     if (basket) {
       mappedBasket = basket.basket.map(product => {
@@ -39,6 +54,7 @@ export default class basket extends React.Component {
     }
 
     return <div class="col-md-4">
+      <h3>Basket</h3>
       <table class="table">
         <thead>
         <tr>
@@ -48,7 +64,7 @@ export default class basket extends React.Component {
         </tr>
         </thead>
         <tbody>
-        {mappedBasket}
+          {mappedBasket}
         </tbody>
       </table>
       <Status />
