@@ -3,7 +3,7 @@ export default function reducer(state = {
   total: 0,
   discountedTotal: 0,
   discountApplied: false,
-  appliedDiscount: ''
+  appliedDiscount: 0
 }, action) {
   switch (action.type) {
     case 'LOAD_DISCOUNTS': {
@@ -97,7 +97,7 @@ export default function reducer(state = {
       if (typeof voucherCode === 'undefined') {
         return {
           ...state,
-          appliedDiscount: false,
+          appliedDiscount: 0,
           discountedTotal: state.total
         }
       }
@@ -109,7 +109,7 @@ export default function reducer(state = {
       if (!thisDiscount) {
         return {
           ...state,
-          appliedDiscount: false,
+          appliedDiscount: 1,
           discountedTotal: state.total
         }
       }
@@ -140,21 +140,20 @@ export default function reducer(state = {
       } else {
         catCheck = true;
       }
-      console.log(totalCheck)
-      console.log(catCheck)
+
       if (totalCheck && catCheck) {
         console.log('passes')
         const newDiscounted = parseFloat(state.total).toFixed(2) - thisDiscount.value
         return {
           ...state,
-          appliedDiscount: true,
+          appliedDiscount: 2,
           discountedTotal: parseFloat(newDiscounted).toFixed(2)
         }
       } else {
         console.log('doesnt pass')
         return {
           ...state,
-          appliedDiscount: false,
+          appliedDiscount: 1,
           discountedTotal: state.total
         }
       }

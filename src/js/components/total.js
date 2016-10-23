@@ -12,7 +12,7 @@ export default class Total extends React.Component {
 
   render() {
     const {basket} = this.props;
-    if (basket.appliedDiscount) {
+    if (basket.appliedDiscount === 2 ) {
       return <td colSpan="2">Total: <strike>£{basket.total}</strike>, £{basket.discountedTotal} with discount</td>
     }
     return <td colSpan="2">Total: £{basket.total}</td>
