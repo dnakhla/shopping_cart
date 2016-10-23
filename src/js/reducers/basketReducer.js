@@ -60,7 +60,6 @@ export default function reducer(state = {
 
     }
     case 'CLEAR_BASKET': {
-      console.log('clear')
       return {
         ...state,
         basket: []
@@ -86,14 +85,11 @@ export default function reducer(state = {
       }
     }
     case 'APPLY_DISCOUNT': {
-      console.log('APPLY_DISCOUNT')
-
       const discounts = [...state.discounts]
       const voucherCode = state.voucherCode
       let totalCheck = false;
       let catCheck = false;
       let thisDiscount;
-      console.log(state)
       if (typeof voucherCode === 'undefined') {
         return {
           ...state,
@@ -116,7 +112,6 @@ export default function reducer(state = {
 
       // total check
       if (thisDiscount.conditions.total > 0) {
-        console.log('has total check')
         if (thisDiscount.conditions.total < state.basket.total) {
           totalCheck = true;
         }
@@ -127,7 +122,6 @@ export default function reducer(state = {
       // cat check
       if (thisDiscount.conditions.category.length > 0) {
         const newBasket = [...state.basket]
-        console.log(newBasket)
         const hasCat = [];
         newBasket.map((item) => {
           thisDiscount.conditions.category.map((cat) => {
@@ -142,7 +136,6 @@ export default function reducer(state = {
       }
 
       if (totalCheck && catCheck) {
-        console.log('passes')
         const newDiscounted = parseFloat(state.total).toFixed(2) - thisDiscount.value
         return {
           ...state,
@@ -150,7 +143,6 @@ export default function reducer(state = {
           discountedTotal: parseFloat(newDiscounted).toFixed(2)
         }
       } else {
-        console.log('doesnt pass')
         return {
           ...state,
           appliedDiscount: 1,

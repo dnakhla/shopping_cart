@@ -3,9 +3,11 @@ import React from 'react';
 import Basket from './basket'
 import ProductList from './productList'
 
+/**
+ * Base component which pulls in product list and basket
+ */
 export default class Layout extends React.Component {
   componentDidMount() {
-    console.log('Layout mount');
   }
 
   render() {

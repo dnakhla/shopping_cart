@@ -34,15 +34,16 @@ export default class Discounts extends React.Component {
   render() {
     const {basket} = this.props;
     let valid = 'input-group'; // success value to be applied dependent on appliedDiscount
-    // if (basket.voucherCode) {
-      if (basket.appliedDiscount === 0) {
-        valid = 'input-group'
-      } else if (basket.appliedDiscount === 1) {
-        valid = 'input-group has-error'
-      } else if (basket.appliedDiscount === 2) {
-        valid = 'input-group has-success'
-      }
-    // }
+
+    // Setting class for input form
+    if (basket.appliedDiscount === 0) {
+      valid = 'input-group'
+    } else if (basket.appliedDiscount === 1) {
+      valid = 'input-group has-error'
+    } else if (basket.appliedDiscount === 2) {
+      valid = 'input-group has-success'
+    }
+
     return <tr>
       <td colSpan="2">
         <form class={valid} style={{display: 'flex'}}>
