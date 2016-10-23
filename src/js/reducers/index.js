@@ -4,6 +4,6 @@ import basket from './basketReducer'
 import product from './productReducer'
 
 export default combineReducers({
-  basket
-  // product
+  basket,
+  product
 })

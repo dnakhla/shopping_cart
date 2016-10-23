@@ -1,29 +1,30 @@
 const discounts = [
   {
     code: '5off',
-    value: -5,
+    value: 5,
+    message: '£5 off applied',
     conditions: {
-      products: [],
       category: [],
-      total: ''
+      total: 0
     }
   },
   {
     code: 'over50',
-    value: -10,
+    value: 10,
+    message: '£10 off applied',
     conditions: {
-      products: [],
       category: [],
       total: 50
     }
   },
   {
     code: 'over75footwear',
-    value: -15,
+    value: 15,
+    message: '£15 off applied',
     conditions: {
-      products: [],
-      category: ['footwear'],
+      category: ['Men’s Casualwear'],
       total: 75
     }
   },
 ]
+export default discounts;

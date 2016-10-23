@@ -1,24 +1,54 @@
-export function addProduct(id) {
+import discounts from '../../../data/discounts'
+export function loadDiscounts() {
+  return {
+    type: 'LOAD_DISCOUNTS',
+    payload: discounts
+  }
+}
+
+export function addProduct(product) {
   return {
     type: 'ADD_PRODUCT',
     payload: {
-      id: id
+      product: product
     }
   }
 }
 
-export function removeProduct(id) {
+export function removeProduct(prod) {
   return {
     type: 'REMOVE_PRODUCT',
     payload: {
-      id: id
+      prod: prod
     }
   }
 }
 
 export function clearBasket() {
   return {
-    type: 'CLEAR_BASKET',
-    payload: ''
+    type: 'CLEAR_BASKET'
   }
 }
+
+export function calcTotal() {
+  return {
+    type: 'CALC_TOTAL'
+  }
+}
+
+export function setVoucher(value) {
+  return {
+    type: 'SET_CODE',
+    payload: {
+      voucherCode: value
+    }
+  }
+}
+
+export function applyDiscount() {
+  return {
+    type: 'APPLY_DISCOUNT'
+  }
+}
+
+

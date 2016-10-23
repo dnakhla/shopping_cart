@@ -1,10 +1,14 @@
+var debug = process.env.NODE_ENV !== "production";
 var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
   entry: './src/js/client.js',
-  devtool: "inline-sourcemap",
-  output: { path: __dirname, filename: 'build/bundle.js' },
+  devtool: debug ? "inline-sourcemap" : null,
+  output: {
+    path: __dirname + "/build/",
+    filename: "bundle.js"
+  },
   module: {
     loaders: [
       {
@@ -18,9 +22,9 @@ module.exports = {
       }
     ]
   },
-  plugins: [
-  new webpack.optimize.DedupePlugin(),
-  new webpack.optimize.OccurenceOrderPlugin(),
-  new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: false }),
-],
+  plugins: debug ? [] : [
+    new webpack.optimize.DedupePlugin(),
+    new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: false }),
+  ],
 };
