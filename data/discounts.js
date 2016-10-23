@@ -2,8 +2,8 @@ const discounts = [
   {
     code: '5off',
     value: 5,
+    message: '£5 off applied',
     conditions: {
-      products: [],
       category: [],
       total: ''
     }
@@ -11,8 +11,8 @@ const discounts = [
   {
     code: 'over50',
     value: 10,
+    message: '£10 off applied',
     conditions: {
-      products: [],
       category: [],
       total: 50
     }
@@ -20,9 +20,9 @@ const discounts = [
   {
     code: 'over75footwear',
     value: 15,
+    message: '£15 off applied',
     conditions: {
-      products: [],
-      category: ['footwear'],
+      category: ['Men’s Casualwear'],
       total: 75
     }
   },

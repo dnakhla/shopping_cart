@@ -24,7 +24,7 @@ export default function reducer(state = {
       if (foundItem) {
         return {
           ...state,
-          basket: [...state.basket, ...state.basket[itemIndex].quantity++ ]
+          basket: [...state.basket, ...state.basket[itemIndex].quantity++]
         }
       } else {
         prod.quantity = 1;
@@ -58,7 +58,6 @@ export default function reducer(state = {
       }
 
 
-
     }
     case 'CLEAR_BASKET': {
       console.log('clear')
@@ -88,33 +87,77 @@ export default function reducer(state = {
     }
     case 'APPLY_DISCOUNT': {
       console.log('APPLY_DISCOUNT')
+
       const discounts = [...state.discounts]
       const voucherCode = state.voucherCode
-      const appliedDiscount = state.appliedDiscount
-      console.log(discounts)
+      let totalCheck = false;
+      let catCheck = false;
       let thisDiscount;
+      console.log(state)
+      if (typeof voucherCode === 'undefined') {
+        return {
+          ...state,
+          appliedDiscount: false,
+          discountedTotal: state.total
+        }
+      }
       discounts.map((discount) => {
         if (discount.code === voucherCode) {
           thisDiscount = discount
         }
       })
+      if (!thisDiscount) {
+        return {
+          ...state,
+          appliedDiscount: false,
+          discountedTotal: state.total
+        }
+      }
 
-      if (thisDiscount) {
-        console.log(state.total)
-        console.log(thisDiscount.value)
+      // total check
+      if (thisDiscount.conditions.total > 0) {
+        console.log('has total check')
+        if (thisDiscount.conditions.total < state.basket.total) {
+          totalCheck = true;
+        }
+      } else {
+        totalCheck = true;
+      }
+
+      // cat check
+      if (thisDiscount.conditions.category.length > 0) {
+        console.log('has cat check')
+        const newBasket = [...state.basket]
+        console.log(newBasket)
+        const hasCat = [];
+        newBasket.map((item) => {
+          thisDiscount.conditions.category.map((cat) => {
+            if (item.cat === cat) {
+              hasCat.push(item.cat)
+              catCheck = true;
+            }
+          })
+        })
+      } else {
+        totalCheck = true;
+      }
+      if (totalCheck && catCheck) {
+        console.log('passes')
         const newDiscounted = parseFloat(state.total).toFixed(2) - thisDiscount.value
         return {
           ...state,
           appliedDiscount: true,
           discountedTotal: parseFloat(newDiscounted).toFixed(2)
         }
+      } else {
+        console.log('doesnt pass')
+        return {
+          ...state,
+          appliedDiscount: false,
+          discountedTotal: state.total
+        }
       }
 
-      return {
-        ...state,
-        appliedDiscount: false,
-        discountedTotal: state.total
-      }
     }
   }
 

@@ -40,7 +40,7 @@ export function setVoucher() {
   return {
     type: 'SET_CODE',
     payload: {
-      voucherCode: 'over50'
+      voucherCode: 'over75footwear'
     }
   }
 }
