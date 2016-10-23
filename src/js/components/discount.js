@@ -26,15 +26,12 @@ export default class Discounts extends React.Component {
       success = <p>Discount Applied</p>
     }
     return <tr>
-      <form>
-        <td>
-          <input type="text" class="" name="voucher" placeholder="Voucher" onChange={this.handleVoucherChange.bind(this)}/>
-          {success}
-        </td>
-        <td>
-          <button class="btn btn-primary btn-block" onClick={this.setVoucher.bind(this)}>Redeem</button>
-        </td>
-      </form>
+      <td colSpan="2">
+        <form class="input-group" style={{display: 'flex'}}>
+          <input type="text" class="" name="voucher" placeholder="Voucher" onChange={this.handleVoucherChange.bind(this)} aria-describedby="basic-addon2"/>
+          <button class="btn btn-primary input-group-addon" onClick={this.setVoucher.bind(this)} id="basic-addon2" style={{width: 'auto'}}>Redeem</button>
+        </form>
+      </td>
     </tr>
   }
 }

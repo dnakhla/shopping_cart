@@ -17,7 +17,6 @@ export default class Status extends React.Component {
     return <table class="table">
       <tbody>
       <tr>
-        <td>Total</td>
         <Total price={basket.total}/>
         <Clear />
       </tr>

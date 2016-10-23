@@ -13,8 +13,8 @@ export default class Total extends React.Component {
   render() {
     const {basket} = this.props;
     if (basket.appliedDiscount) {
-      return <td><strike>£{basket.total}</strike>, £{basket.discountedTotal}</td>
+      return <td colSpan="2">Total: <strike>£{basket.total}</strike>, £{basket.discountedTotal} with discount</td>
     }
-    return <td>£{basket.total}</td>
+    return <td colSpan="2">Total: £{basket.total}</td>
   }
 }
