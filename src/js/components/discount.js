@@ -9,9 +9,14 @@ import {setVoucher, applyDiscount} from '../actions/basketActions'
   }
 })
 export default class Discounts extends React.Component {
-  setVoucher(value) {
-    this.props.dispatch(setVoucher(value))
+  setVoucher(e) {
+    e.preventDefault();
     this.props.dispatch(applyDiscount())
+  }
+
+  handleVoucherChange(e) {
+    const value = e.target.value
+    this.props.dispatch(setVoucher(value))
   }
 
   render() {
@@ -21,13 +26,15 @@ export default class Discounts extends React.Component {
       success = <p>Discount Applied</p>
     }
     return <tr>
-      <td>
-        <input type="text" class="" placeholder="Voucher"/>
-        {success}
-      </td>
-      <td>
-        <button type="submit" class="btn btn-primary btn-block" onClick={this.setVoucher.bind(this)}>Redeem</button>
-      </td>
+      <form>
+        <td>
+          <input type="text" class="" name="voucher" placeholder="Voucher" onChange={this.handleVoucherChange.bind(this)}/>
+          {success}
+        </td>
+        <td>
+          <button class="btn btn-primary btn-block" onClick={this.setVoucher.bind(this)}>Redeem</button>
+        </td>
+      </form>
     </tr>
   }
 }

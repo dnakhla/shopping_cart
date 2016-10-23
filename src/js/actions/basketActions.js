@@ -36,11 +36,11 @@ export function calcTotal() {
   }
 }
 
-export function setVoucher() {
+export function setVoucher(value) {
   return {
     type: 'SET_CODE',
     payload: {
-      voucherCode: 'over75footwear'
+      voucherCode: value
     }
   }
 }

@@ -5,7 +5,7 @@ const discounts = [
     message: '£5 off applied',
     conditions: {
       category: [],
-      total: ''
+      total: 0
     }
   },
   {

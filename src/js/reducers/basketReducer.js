@@ -126,7 +126,6 @@ export default function reducer(state = {
 
       // cat check
       if (thisDiscount.conditions.category.length > 0) {
-        console.log('has cat check')
         const newBasket = [...state.basket]
         console.log(newBasket)
         const hasCat = [];
@@ -139,8 +138,10 @@ export default function reducer(state = {
           })
         })
       } else {
-        totalCheck = true;
+        catCheck = true;
       }
+      console.log(totalCheck)
+      console.log(catCheck)
       if (totalCheck && catCheck) {
         console.log('passes')
         const newDiscounted = parseFloat(state.total).toFixed(2) - thisDiscount.value
