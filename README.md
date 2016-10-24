@@ -1,6 +1,4 @@
 # Shopping Basket
-Deloitte Digital Development Test
-
 ##Objective
 Develop a responsive website for a clothing retailer
 
