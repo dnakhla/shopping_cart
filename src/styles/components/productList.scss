@@ -1,0 +1,51 @@
+@import '../global/variables';
+
+.product__container {
+  display: block;
+  margin: 0 auto;
+  border: red solid 1px;
+  max-width: 1200px;
+}
+
+.product__list {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.product__item {
+  margin: 5px;
+  width: 270px;
+  justify-content: space-around;
+}
+
+.item__details div {
+  max-width: 100%;
+}
+
+.item__image {
+  height: 270px;
+  width: 270px;
+}
+
+.item__name {
+  font-size: 1.6em;
+  margin: 10px 0;
+}
+
+.item__button {
+  display: block;
+  cursor: pointer;
+  border: 3px solid $button-dark;
+  background: $white;
+  font-weight: bold;
+  color: $button-dark;
+  font-size: 14px;
+  padding: 10px 20px;
+}

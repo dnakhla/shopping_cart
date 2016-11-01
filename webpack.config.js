@@ -1,9 +1,10 @@
 var debug = process.env.NODE_ENV !== "production";
 var path = require('path');
 var webpack = require('webpack');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-  entry: './src/js/client.js',
+  entry: './src/client.js',
   devtool: debug ? "inline-sourcemap" : null,
   output: {
     path: __dirname + "/build/",
@@ -19,12 +20,20 @@ module.exports = {
           presets: ['react', 'es2015', 'stage-0'],
           plugins: ['react-html-attrs', 'transform-class-properties', 'transform-decorators-legacy'],
         }
-      }
+      },
+      {
+        test: /\.scss$/,
+        loaders: [
+          'style',
+          'css',
+          'sass'
+        ]
+      },
     ]
   },
   plugins: debug ? [] : [
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.OccurenceOrderPlugin(),
-    new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: false }),
+    new webpack.optimize.UglifyJsPlugin({mangle: false, sourcemap: false})
   ],
 };

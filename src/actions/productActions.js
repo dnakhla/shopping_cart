@@ -1,4 +1,4 @@
-import items from '../../../data/products' // imports discounts from data folder
+import items from '../../data/products' // imports discounts from data folder
 
 /**
  * List of exported actions which once triggered will pass payload to reducer dependent on type

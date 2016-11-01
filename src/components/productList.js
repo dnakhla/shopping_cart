@@ -1,4 +1,5 @@
 import React from "react";
+import LazyLoad from 'react-lazy-load';
 import {connect} from 'react-redux'
 
 /**
@@ -6,9 +7,11 @@ import {connect} from 'react-redux'
  */
 import {addProduct, calcTotal, applyDiscount} from '../actions/basketActions';
 import {loadProducts, reduceStock} from '../actions/productActions';
+
 /**
  * lets component use store
  */
+
 @connect((store) => {
   return {
     products: store.product.products
@@ -36,46 +39,39 @@ export default class productList extends React.Component {
   render() {
     const {products} = this.props; // making products available from state
 
-    const mappedProducts = products.map(product => { // maps out product rows from store
+    const mappedProducts = products.map((product, index) => { // maps out product rows from store
       let disabled;
       if (product.stock === 0) { // set disabled
         disabled = 'disabled'
       }
       let price; // renders either price or discounted price
       if (product.originalPrice !== product.price) {
-        price = <td><strike>£{product.originalPrice}</strike>, £{product.price} </td>
+        price = <span><strike>£{product.originalPrice}</strike>, £{product.price}</span>
       } else {
-        price = <td>£{product.price}</td>
+        price = <span>£{product.price}</span>
       }
-      return <tr key={product.id}>
-        <td>{product.name}</td>
-        <td>{product.cat}</td>
-        {price}
-        <td>{product.stock}</td>
-        <td>
-          <button class="btn btn-default btn-block" type="submit" disabled={disabled} onClick={this.addToBasket.bind(this, {product})}>
-            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-          </button>
-        </td>
-      </tr>
+      const backgroundImage = {
+        backgroundImage: 'url(' + product.image + ')'
+      }
+      return <li class="product__item" key={index}>
+        <div class="item__image" style={backgroundImage}></div>
+        <div class="item__details">
+          <div class="item__name">{product.name}</div>
+          <div class="item__category">{product.cat}</div>
+          <div class="item__price">{price}</div>
+          <div class="item__stock">{product.stock}</div>
+        </div>
+        <button class="button item__button" type="submit" disabled={disabled} onClick={this.addToBasket.bind(this, {product})}>
+          Add to Basket
+        </button>
+      </li>
     })
 
 
-    return <div class="col-md-8">
-          <table class="table table-responsive">
-            <thead>
-            <tr>
-              <td>Product</td>
-              <td>Category</td>
-              <td>Price</td>
-              <td>Quantity</td>
-              <td><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></td>
-            </tr>
-            </thead>
-            <tbody>
-            {mappedProducts}
-            </tbody>
-          </table>
-        </div>
+    return <div class="product__container">
+      <ul class="product__list">
+        {mappedProducts}
+      </ul>
+    </div>
   }
 }
