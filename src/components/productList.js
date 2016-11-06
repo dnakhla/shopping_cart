@@ -1,5 +1,4 @@
 import React from "react";
-import LazyLoad from 'react-lazy-load';
 import {connect} from 'react-redux'
 
 /**
@@ -14,7 +13,8 @@ import {loadProducts, reduceStock} from '../actions/productActions';
 
 @connect((store) => {
   return {
-    products: store.product.products
+    products: store.product.products,
+    basket: store.basket
   }
 })
 export default class productList extends React.Component {
@@ -40,30 +40,38 @@ export default class productList extends React.Component {
     const {products} = this.props; // making products available from state
 
     const mappedProducts = products.map((product, index) => { // maps out product rows from store
-      let disabled;
-      if (product.stock === 0) { // set disabled
-        disabled = 'disabled'
+      let buyButton;
+      if (product.stock === 0) { // set buyButton
+        buyButton = <a class="button item__button button-disabled">Add to Basket</a>
+      }  else {
+        buyButton = <a class="button item__button" onClick={this.addToBasket.bind(this, {product})}>Add to Basket</a>
       }
+
       let price; // renders either price or discounted price
       if (product.originalPrice !== product.price) {
         price = <span><strike>£{product.originalPrice}</strike>, £{product.price}</span>
       } else {
         price = <span>£{product.price}</span>
       }
+
       const backgroundImage = {
         backgroundImage: 'url(' + product.image + ')'
       }
+
+      let stock = 'Sold Out';
+      if (product.stock) stock = product.stock + ' in stock';
+
       return <li class="product__item" key={index}>
-        <div class="item__image" style={backgroundImage}></div>
+        <a onClick={this.addToBasket.bind(this)}>
+          <div class="item__image" style={backgroundImage}></div>
+        </a>
+        {buyButton}
         <div class="item__details">
           <div class="item__name">{product.name}</div>
-          <div class="item__category">{product.cat}</div>
+          <div class="item__cat">{product.cat}</div>
           <div class="item__price">{price}</div>
-          <div class="item__stock">{product.stock}</div>
+          <div class="item__stock">{stock}</div>
         </div>
-        <button class="button item__button" type="submit" disabled={disabled} onClick={this.addToBasket.bind(this, {product})}>
-          Add to Basket
-        </button>
       </li>
     })
 

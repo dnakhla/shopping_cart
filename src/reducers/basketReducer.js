@@ -1,5 +1,6 @@
 export default function reducer(state = {
   basket: [],
+  open: false,
   total: 0,
   discountedTotal: 0,
   discountApplied: false,
@@ -147,6 +148,20 @@ export default function reducer(state = {
           ...state,
           appliedDiscount: 1,
           discountedTotal: state.total
+        }
+      }
+
+    }
+    case 'TOGGLE_DRAWER': {
+      if (state.open) {
+        return {
+          ...state,
+          open: false
+        }
+      } else {
+        return {
+          ...state,
+          open: true
         }
       }
 

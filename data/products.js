@@ -2,7 +2,7 @@ const products = [
   {
     id: 1,
     name: 'Almond Toe Court Shoes, Patent Black',
-    image: 'http://placekitten.com/270/270',
+    image: 'http://placehold.it/300x300/333333?text=Item',
     cat: 'Women’s Footwear',
     price: 99,
     originalPrice: 99,
@@ -12,7 +12,7 @@ const products = [
   {
     id: 2,
     name: 'Suede Shoes, Blue',
-    image: 'http://placekitten.com/270/270',
+    image: 'http://placehold.it/300x300/333333?text=Item',
     cat: 'Women’s Footwear',
     price: 42.00,
     originalPrice: 42.00,
@@ -22,7 +22,7 @@ const products = [
   {
     id: 3,
     name: 'Leather Driver Saddle Loafers, Tan',
-    image: 'http://placekitten.com/270/270',
+    image: 'http://placehold.it/300x300/333333?text=Item',
     cat: 'Men’s Footwear ',
     price: 34.00,
     originalPrice: 34.00,
@@ -32,7 +32,7 @@ const products = [
   {
     id: 4,
     name: 'Flip Flops, Red',
-    image: 'http://placekitten.com/270/270',
+    image: 'http://placehold.it/300x300/333333?text=Item',
     cat: 'Men’s Footwear',
     price: 19.00,
     originalPrice: 19.00,
@@ -42,7 +42,7 @@ const products = [
   {
     id: 5,
     name: 'Flip Flops, Blue',
-    image: 'http://placekitten.com/270/270',
+    image: 'http://placehold.it/300x300/333333?text=Item',
     cat: 'Men’s Footwear',
     price: 19.00,
     originalPrice: 19.00,
@@ -52,7 +52,7 @@ const products = [
   {
     id: 6,
     name: 'Gold Button Cardigan, Black',
-    image: 'http://placekitten.com/270/270',
+    image: 'http://placehold.it/300x300/333333?text=Item',
     cat: 'Women’s Casualwear',
     price: 167.00,
     originalPrice: 167.00,
@@ -62,7 +62,7 @@ const products = [
   {
     id: 7,
     name: 'Cotton Shorts, Medium Red',
-    image: 'http://placekitten.com/270/270',
+    image: 'http://placehold.it/300x300/333333?text=Item',
     cat: 'Women’s Casualwear',
     price: 30.00,
     originalPrice: 30.00,
@@ -72,7 +72,7 @@ const products = [
   {
     id: 8,
     name: 'Fine Stripe Short Sleeve Shirt, Grey',
-    image: 'http://placekitten.com/270/270',
+    image: 'http://placehold.it/300x300/333333?text=Item',
     cat: 'Men’s Casualwear',
     price: 49.99,
     originalPrice: 49.99,
@@ -82,7 +82,7 @@ const products = [
   {
     id: 9,
     name: 'Fine Stripe Short Sleeve Shirt, Green',
-    image: 'http://placekitten.com/270/270',
+    image: 'http://placehold.it/300x300/333333?text=Item',
     cat: 'Men’s Casualwear',
     price: 39.99,
     originalPrice: 49.99,
@@ -92,7 +92,7 @@ const products = [
   {
     id: 10,
     name: 'Sharkskin Waistcoat, Charcoal',
-    image: 'http://placekitten.com/270/270',
+    image: 'http://placehold.it/300x300/333333?text=Item',
     cat: 'Men’s Formalwear',
     price: 75.00,
     originalPrice: 75.00,
@@ -102,7 +102,7 @@ const products = [
   {
     id: 11,
     name: 'Lightweight Patch Pocket Blazer, Deer',
-    image: 'http://placekitten.com/270/270',
+    image: 'http://placehold.it/300x300/333333?text=Item',
     cat: 'Men’s Formalwear',
     price: 175.50,
     originalPrice: 175.50,
@@ -112,7 +112,7 @@ const products = [
   {
     id: 12,
     name: 'Bird Print Dress, Black',
-    image: 'http://placekitten.com/270/270',
+    image: 'http://placehold.it/300x300/333333?text=Item',
     cat: 'Women’s Formalwear',
     price: 270.00,
     originalPrice: 270.00,
@@ -122,13 +122,483 @@ const products = [
   {
     id: 13,
     name: 'Mid Twist Cut-Out Dress, Pink',
-    image: 'http://placekitten.com/270/270',
+    image: 'http://placehold.it/300x300/333333?text=Item',
     cat: 'Women’s Formalwear',
     price: 540.00,
     originalPrice: 540.00,
     originalStock: 5,
     stock: 5
   },
+  {
+    id: 13,
+    name: 'Mid Twist Cut-Out Dress, Pink',
+    image: 'http://placehold.it/300x300/333333?text=Item',
+    cat: 'Women’s Formalwear',
+    price: 540.00,
+    originalPrice: 540.00,
+    originalStock: 5,
+    stock: 5
+  },
+  {
+    id: 13,
+    name: 'Mid Twist Cut-Out Dress, Pink',
+    image: 'http://placehold.it/300x300/333333?text=Item',
+    cat: 'Women’s Formalwear',
+    price: 540.00,
+    originalPrice: 540.00,
+    originalStock: 5,
+    stock: 5
+  },
+  {
+    id: 13,
+    name: 'Mid Twist Cut-Out Dress, Pink',
+    image: 'http://placehold.it/300x300/333333?text=Item',
+    cat: 'Women’s Formalwear',
+    price: 540.00,
+    originalPrice: 540.00,
+    originalStock: 5,
+    stock: 5
+  },
+  {
+    id: 13,
+    name: 'Mid Twist Cut-Out Dress, Pink',
+    image: 'http://placehold.it/300x300/333333?text=Item',
+    cat: 'Women’s Formalwear',
+    price: 540.00,
+    originalPrice: 540.00,
+    originalStock: 5,
+    stock: 5
+  },
+  {
+    id: 13,
+    name: 'Mid Twist Cut-Out Dress, Pink',
+    image: 'http://placehold.it/300x300/333333?text=Item',
+    cat: 'Women’s Formalwear',
+    price: 540.00,
+    originalPrice: 540.00,
+    originalStock: 5,
+    stock: 5
+  },
+  {
+    id: 13,
+    name: 'Mid Twist Cut-Out Dress, Pink',
+    image: 'http://placehold.it/300x300/333333?text=Item',
+    cat: 'Women’s Formalwear',
+    price: 540.00,
+    originalPrice: 540.00,
+    originalStock: 5,
+    stock: 5
+  },
+  {
+    id: 13,
+    name: 'Mid Twist Cut-Out Dress, Pink',
+    image: 'http://placehold.it/300x300/333333?text=Item',
+    cat: 'Women’s Formalwear',
+    price: 540.00,
+    originalPrice: 540.00,
+    originalStock: 5,
+    stock: 5
+  },
+  {
+    id: 13,
+    name: 'Mid Twist Cut-Out Dress, Pink',
+    image: 'http://placehold.it/300x300/333333?text=Item',
+    cat: 'Women’s Formalwear',
+    price: 540.00,
+    originalPrice: 540.00,
+    originalStock: 5,
+    stock: 5
+  },
+  {
+    id: 13,
+    name: 'Mid Twist Cut-Out Dress, Pink',
+    image: 'http://placehold.it/300x300/333333?text=Item',
+    cat: 'Women’s Formalwear',
+    price: 540.00,
+    originalPrice: 540.00,
+    originalStock: 5,
+    stock: 5
+  },
+  {
+    id: 13,
+    name: 'Mid Twist Cut-Out Dress, Pink',
+    image: 'http://placehold.it/300x300/333333?text=Item',
+    cat: 'Women’s Formalwear',
+    price: 540.00,
+    originalPrice: 540.00,
+    originalStock: 5,
+    stock: 5
+  },
+  {
+    id: 13,
+    name: 'Mid Twist Cut-Out Dress, Pink',
+    image: 'http://placehold.it/300x300/333333?text=Item',
+    cat: 'Women’s Formalwear',
+    price: 540.00,
+    originalPrice: 540.00,
+    originalStock: 5,
+    stock: 5
+  },
+  {
+    id: 13,
+    name: 'Mid Twist Cut-Out Dress, Pink',
+    image: 'http://placehold.it/300x300/333333?text=Item',
+    cat: 'Women’s Formalwear',
+    price: 540.00,
+    originalPrice: 540.00,
+    originalStock: 5,
+    stock: 5
+  },
+  {
+    id: 13,
+    name: 'Mid Twist Cut-Out Dress, Pink',
+    image: 'http://placehold.it/300x300/333333?text=Item',
+    cat: 'Women’s Formalwear',
+    price: 540.00,
+    originalPrice: 540.00,
+    originalStock: 5,
+    stock: 5
+  },
+  {
+    id: 13,
+    name: 'Mid Twist Cut-Out Dress, Pink',
+    image: 'http://placehold.it/300x300/333333?text=Item',
+    cat: 'Women’s Formalwear',
+    price: 540.00,
+    originalPrice: 540.00,
+    originalStock: 5,
+    stock: 5
+  },
+  {
+    id: 13,
+    name: 'Mid Twist Cut-Out Dress, Pink',
+    image: 'http://placehold.it/300x300/333333?text=Item',
+    cat: 'Women’s Formalwear',
+    price: 540.00,
+    originalPrice: 540.00,
+    originalStock: 5,
+    stock: 5
+  },
+  {
+    id: 13,
+    name: 'Mid Twist Cut-Out Dress, Pink',
+    image: 'http://placehold.it/300x300/333333?text=Item',
+    cat: 'Women’s Formalwear',
+    price: 540.00,
+    originalPrice: 540.00,
+    originalStock: 5,
+    stock: 5
+  },
+  {
+    id: 13,
+    name: 'Mid Twist Cut-Out Dress, Pink',
+    image: 'http://placehold.it/300x300/333333?text=Item',
+    cat: 'Women’s Formalwear',
+    price: 540.00,
+    originalPrice: 540.00,
+    originalStock: 5,
+    stock: 5
+  },
+  {
+    id: 13,
+    name: 'Mid Twist Cut-Out Dress, Pink',
+    image: 'http://placehold.it/300x300/333333?text=Item',
+    cat: 'Women’s Formalwear',
+    price: 540.00,
+    originalPrice: 540.00,
+    originalStock: 5,
+    stock: 5
+  },
+  {
+    id: 13,
+    name: 'Mid Twist Cut-Out Dress, Pink',
+    image: 'http://placehold.it/300x300/333333?text=Item',
+    cat: 'Women’s Formalwear',
+    price: 540.00,
+    originalPrice: 540.00,
+    originalStock: 5,
+    stock: 5
+  },
+  {
+    id: 13,
+    name: 'Mid Twist Cut-Out Dress, Pink',
+    image: 'http://placehold.it/300x300/333333?text=Item',
+    cat: 'Women’s Formalwear',
+    price: 540.00,
+    originalPrice: 540.00,
+    originalStock: 5,
+    stock: 5
+  },
+  {
+    id: 13,
+    name: 'Mid Twist Cut-Out Dress, Pink',
+    image: 'http://placehold.it/300x300/333333?text=Item',
+    cat: 'Women’s Formalwear',
+    price: 540.00,
+    originalPrice: 540.00,
+    originalStock: 5,
+    stock: 5
+  },
+  {
+    id: 13,
+    name: 'Mid Twist Cut-Out Dress, Pink',
+    image: 'http://placehold.it/300x300/333333?text=Item',
+    cat: 'Women’s Formalwear',
+    price: 540.00,
+    originalPrice: 540.00,
+    originalStock: 5,
+    stock: 5
+  },
+  {
+    id: 13,
+    name: 'Mid Twist Cut-Out Dress, Pink',
+    image: 'http://placehold.it/300x300/333333?text=Item',
+    cat: 'Women’s Formalwear',
+    price: 540.00,
+    originalPrice: 540.00,
+    originalStock: 5,
+    stock: 5
+  },
+  {
+    id: 13,
+    name: 'Mid Twist Cut-Out Dress, Pink',
+    image: 'http://placehold.it/300x300/333333?text=Item',
+    cat: 'Women’s Formalwear',
+    price: 540.00,
+    originalPrice: 540.00,
+    originalStock: 5,
+    stock: 5
+  },
+  {
+    id: 13,
+    name: 'Mid Twist Cut-Out Dress, Pink',
+    image: 'http://placehold.it/300x300/333333?text=Item',
+    cat: 'Women’s Formalwear',
+    price: 540.00,
+    originalPrice: 540.00,
+    originalStock: 5,
+    stock: 5
+  },
+  {
+    id: 13,
+    name: 'Mid Twist Cut-Out Dress, Pink',
+    image: 'http://placehold.it/300x300/333333?text=Item',
+    cat: 'Women’s Formalwear',
+    price: 540.00,
+    originalPrice: 540.00,
+    originalStock: 5,
+    stock: 5
+  },
+  {
+    id: 13,
+    name: 'Mid Twist Cut-Out Dress, Pink',
+    image: 'http://placehold.it/300x300/333333?text=Item',
+    cat: 'Women’s Formalwear',
+    price: 540.00,
+    originalPrice: 540.00,
+    originalStock: 5,
+    stock: 5
+  },
+  {
+    id: 13,
+    name: 'Mid Twist Cut-Out Dress, Pink',
+    image: 'http://placehold.it/300x300/333333?text=Item',
+    cat: 'Women’s Formalwear',
+    price: 540.00,
+    originalPrice: 540.00,
+    originalStock: 5,
+    stock: 5
+  },
+  {
+    id: 13,
+    name: 'Mid Twist Cut-Out Dress, Pink',
+    image: 'http://placehold.it/300x300/333333?text=Item',
+    cat: 'Women’s Formalwear',
+    price: 540.00,
+    originalPrice: 540.00,
+    originalStock: 5,
+    stock: 5
+  },
+  {
+    id: 13,
+    name: 'Mid Twist Cut-Out Dress, Pink',
+    image: 'http://placehold.it/300x300/333333?text=Item',
+    cat: 'Women’s Formalwear',
+    price: 540.00,
+    originalPrice: 540.00,
+    originalStock: 5,
+    stock: 5
+  },
+  {
+    id: 13,
+    name: 'Mid Twist Cut-Out Dress, Pink',
+    image: 'http://placehold.it/300x300/333333?text=Item',
+    cat: 'Women’s Formalwear',
+    price: 540.00,
+    originalPrice: 540.00,
+    originalStock: 5,
+    stock: 5
+  },
+  {
+    id: 13,
+    name: 'Mid Twist Cut-Out Dress, Pink',
+    image: 'http://placehold.it/300x300/333333?text=Item',
+    cat: 'Women’s Formalwear',
+    price: 540.00,
+    originalPrice: 540.00,
+    originalStock: 5,
+    stock: 5
+  },
+  {
+    id: 13,
+    name: 'Mid Twist Cut-Out Dress, Pink',
+    image: 'http://placehold.it/300x300/333333?text=Item',
+    cat: 'Women’s Formalwear',
+    price: 540.00,
+    originalPrice: 540.00,
+    originalStock: 5,
+    stock: 5
+  },
+  {
+    id: 13,
+    name: 'Mid Twist Cut-Out Dress, Pink',
+    image: 'http://placehold.it/300x300/333333?text=Item',
+    cat: 'Women’s Formalwear',
+    price: 540.00,
+    originalPrice: 540.00,
+    originalStock: 5,
+    stock: 5
+  },
+  {
+    id: 13,
+    name: 'Mid Twist Cut-Out Dress, Pink',
+    image: 'http://placehold.it/300x300/333333?text=Item',
+    cat: 'Women’s Formalwear',
+    price: 540.00,
+    originalPrice: 540.00,
+    originalStock: 5,
+    stock: 5
+  },
+  {
+    id: 13,
+    name: 'Mid Twist Cut-Out Dress, Pink',
+    image: 'http://placehold.it/300x300/333333?text=Item',
+    cat: 'Women’s Formalwear',
+    price: 540.00,
+    originalPrice: 540.00,
+    originalStock: 5,
+    stock: 5
+  },
+  {
+    id: 13,
+    name: 'Mid Twist Cut-Out Dress, Pink',
+    image: 'http://placehold.it/300x300/333333?text=Item',
+    cat: 'Women’s Formalwear',
+    price: 540.00,
+    originalPrice: 540.00,
+    originalStock: 5,
+    stock: 5
+  },
+  {
+    id: 13,
+    name: 'Mid Twist Cut-Out Dress, Pink',
+    image: 'http://placehold.it/300x300/333333?text=Item',
+    cat: 'Women’s Formalwear',
+    price: 540.00,
+    originalPrice: 540.00,
+    originalStock: 5,
+    stock: 5
+  },
+  {
+    id: 13,
+    name: 'Mid Twist Cut-Out Dress, Pink',
+    image: 'http://placehold.it/300x300/333333?text=Item',
+    cat: 'Women’s Formalwear',
+    price: 540.00,
+    originalPrice: 540.00,
+    originalStock: 5,
+    stock: 5
+  },
+  {
+    id: 13,
+    name: 'Mid Twist Cut-Out Dress, Pink',
+    image: 'http://placehold.it/300x300/333333?text=Item',
+    cat: 'Women’s Formalwear',
+    price: 540.00,
+    originalPrice: 540.00,
+    originalStock: 5,
+    stock: 5
+  },
+  {
+    id: 13,
+    name: 'Mid Twist Cut-Out Dress, Pink',
+    image: 'http://placehold.it/300x300/333333?text=Item',
+    cat: 'Women’s Formalwear',
+    price: 540.00,
+    originalPrice: 540.00,
+    originalStock: 5,
+    stock: 5
+  },
+  {
+    id: 13,
+    name: 'Mid Twist Cut-Out Dress, Pink',
+    image: 'http://placehold.it/300x300/333333?text=Item',
+    cat: 'Women’s Formalwear',
+    price: 540.00,
+    originalPrice: 540.00,
+    originalStock: 5,
+    stock: 5
+  },
+  {
+    id: 13,
+    name: 'Mid Twist Cut-Out Dress, Pink',
+    image: 'http://placehold.it/300x300/333333?text=Item',
+    cat: 'Women’s Formalwear',
+    price: 540.00,
+    originalPrice: 540.00,
+    originalStock: 5,
+    stock: 5
+  },
+  {
+    id: 13,
+    name: 'Mid Twist Cut-Out Dress, Pink',
+    image: 'http://placehold.it/300x300/333333?text=Item',
+    cat: 'Women’s Formalwear',
+    price: 540.00,
+    originalPrice: 540.00,
+    originalStock: 5,
+    stock: 5
+  },
+  {
+    id: 13,
+    name: 'Mid Twist Cut-Out Dress, Pink',
+    image: 'http://placehold.it/300x300/333333?text=Item',
+    cat: 'Women’s Formalwear',
+    price: 540.00,
+    originalPrice: 540.00,
+    originalStock: 5,
+    stock: 5
+  },
+  {
+    id: 13,
+    name: 'Mid Twist Cut-Out Dress, Pink',
+    image: 'http://placehold.it/300x300/333333?text=Item',
+    cat: 'Women’s Formalwear',
+    price: 540.00,
+    originalPrice: 540.00,
+    originalStock: 5,
+    stock: 5
+  },
+  {
+    id: 13,
+    name: 'Mid Twist Cut-Out Dress, Pink',
+    image: 'http://placehold.it/300x300/333333?text=Item',
+    cat: 'Women’s Formalwear',
+    price: 540.00,
+    originalPrice: 540.00,
+    originalStock: 5,
+    stock: 5
+  }
 ];
 
 export default products;

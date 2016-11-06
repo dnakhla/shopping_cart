@@ -56,4 +56,10 @@ export function applyDiscount() {
   }
 }
 
+export function toggleBasket() {
+  return {
+    type: 'TOGGLE_DRAWER'
+  }
+}
+
 

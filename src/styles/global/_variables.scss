@@ -1,9 +1,30 @@
 // Base Colours
 $white: #ffffff;
+$black: #000000;
+$green: green;
 $background: white;
 $off-white: #e7e7e7;
+$off: #767676;
 $dark: #333333;
 
 // Element Colours
 $product-background: $off-white;
+$drawer-background: $off-white;
 $button-dark: $dark;
+$disabled: $off;
+$success: $green;
+
+// Font Sizes
+$standard-font: 14px;
+$large-font: 16px;
+$largest-font: 18px;
+
+// Breakpoints
+$mobile-portrait: 320px;
+$mobile-mid: 460px;
+$mobile-landscape: 600px;
+$tablet-small: 700px;
+$tablet-portrait: 768px;
+$tablet-mid: 900px;
+$tablet-landscape: 1024px;
+$desktop: 1200px;

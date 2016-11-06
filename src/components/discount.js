@@ -45,12 +45,12 @@ export default class Discounts extends React.Component {
     }
 
     return <tr>
-      <td colSpan="2">
+      <div colSpan="2">
         <form class={valid} style={{display: 'flex'}}>
           <input type="text" class="form-control" style={{padding: '10px'}} name="voucher" placeholder="Voucher" onChange={this.handleVoucherChange.bind(this)} aria-describedby="basic-addon2"/>
           <button class="btn btn-primary input-group-addon" onClick={this.setVoucher.bind(this)} id="basic-addon2" style={{width: 'auto'}}>Redeem</button>
         </form>
-      </td>
+      </div>
     </tr>
   }
 }

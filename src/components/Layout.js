@@ -1,27 +1,22 @@
 import React from 'react';
 
+import Heading from './heading'
 import Basket from './basket'
 import ProductList from './productList'
 
-/**
- * Base component which pulls in product list and basket
- */
 export default class Layout extends React.Component {
   componentDidMount() {
   }
 
   render() {
-    return <div class="container">
-      <div class="row">
-        <div class="page-header">
-          <h1>Shopping Cart <span class="glyphicon glyphicon-shopping-cart btn-lg" aria-hidden="true"></span></h1>
-        </div>
+    return <div class="page">
+      <div class="page__head">
+        <Heading />
       </div>
-      <div class="row">
+      <div class="page__body">
         <ProductList />
         <Basket />
       </div>
-
-    </div>
+  </div>
   }
 }

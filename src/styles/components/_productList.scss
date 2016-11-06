@@ -1,0 +1,85 @@
+@import '../../../node_modules/breakpoint-sass/stylesheets/breakpoint';
+@import '../global/variables';
+
+.product__container {
+  margin: 0 auto;
+  border: red solid 1px;
+  max-width: 320px;
+
+  @include breakpoint($tablet-portrait) {
+    max-width: 800px;
+  }
+  @include breakpoint($desktop) {
+    max-width: 1240px;
+  }
+}
+
+.product__list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.product__item {
+  margin: 15px 0;
+  width: 350px;
+
+  @include breakpoint($mobile-mid) {
+    width: 235px;
+    margin: 15px 5px;
+  }
+
+  @include breakpoint($tablet-landscape) {
+    width: 300px;
+    margin: 15px 5px;
+  }
+}
+
+.item__details {
+  min-height: 140px;
+}
+
+.item__image {
+  height: 350px;
+  width: 350px;
+  background: no-repeat center;
+  background-size: 100%;
+  transition: background 0.2s ease-in-out;
+  border: 3px solid black;
+  box-sizing: border-box;
+
+  @include breakpoint($mobile-mid) {
+    width: 235px;
+    height: 235px;
+  }
+
+  @include breakpoint($tablet-landscape) {
+    width: 300px;
+    height: 300px;
+  }
+
+  &:hover {
+    background-size: 110%;
+    -webkit-transition: background-image 1s ease-in-out;
+    transition: background-image 1s ease-in-out;
+  }
+}
+
+.item__name {
+  font-size: 1.3em;
+  margin: 10px 0;
+}
+
+.item__cat {
+  font-size: 1.2em;
+}
+
+.item__button {
+  width: 100%;
+  margin-top: 10px;
+}

@@ -1,0 +1,62 @@
+@import '../../../node_modules/breakpoint-sass/stylesheets/breakpoint';
+@import '../global/variables';
+
+.basket__list {
+  list-style: none;
+  overflow: scroll;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin: 0;
+}
+.basket__item {
+  max-width: 100%;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #333333;
+
+  .name {
+    font-size: $large-font;
+  }
+
+  .button {
+    padding: 5px 10px;
+  }
+
+}
+.basket__container {
+  position: fixed;
+  padding: 15px;
+  width: 85%;
+  height: 100%;
+  left: 100%;
+  top: 0;
+  transition: 0.3s;
+
+  @include breakpoint($mobile-landscape) {
+    width: 60%;
+  }
+  @include breakpoint($tablet-portrait) {
+    width: 40%;
+  }
+  @include breakpoint($tablet-landscape) {
+    width: 30%;
+  }
+}
+
+.basket__container-open {
+  left: 15%;
+  background: $drawer-background;
+  box-shadow: -2px 0px 19px 0px rgba(0,0,0,0.75);
+
+  @include breakpoint($mobile-landscape) {
+    left: 40%;
+  }
+  @include breakpoint($tablet-portrait) {
+    left: 60%;
+  }
+  @include breakpoint($tablet-landscape) {
+    left: 70%;
+  }
+}

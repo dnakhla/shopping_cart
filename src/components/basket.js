@@ -6,7 +6,7 @@ import Status from './status' // Status Component - contains total and dscounts
 /**
  * Importing methods to be used within component
  */
-import {removeProduct, calcTotal, loadDiscounts, applyDiscount} from '../actions/basketActions';
+import {removeProduct, calcTotal, loadDiscounts, applyDiscount, toggleBasket} from '../actions/basketActions';
 import {addStock} from '../actions/productActions';
 
 /**
@@ -36,37 +36,37 @@ export default class basket extends React.Component {
     this.props.dispatch(applyDiscount()) // re-apply discounts
   }
 
+  toggleDrawer() {
+    this.props.dispatch(toggleBasket());
+  }
+
   render() {
     const {basket} = this.props; // init basket from state
     let mappedBasket
     if (basket) {
       mappedBasket = basket.basket.map(product => {
-        return <tr key={product.id}>
-          <td>{product.name}</td>
-          <td>{product.quantity}</td>
-          <td>
-            <button class="btn btn-danger btn-block btn-block" type="submit" onClick={this.removeFromBasket.bind(this, {product})}>
-              <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+        return <li key={product.id} class="basket__item" >
+          <div class="name">{product.name}</div>
+          <div>{product.quantity}</div>
+          <div>
+            <button class="button" type="submit" onClick={this.removeFromBasket.bind(this, {product})}>
+              -
             </button>
-          </td>
-        </tr>
+          </div>
+        </li>
       })
     }
 
-    return <div class="col-md-4">
-      <h3>Basket</h3>
-      <table class="table">
-        <thead>
-        <tr>
-          <td>Item</td>
-          <td>Quantity</td>
-          <td>Remove</td>
-        </tr>
-        </thead>
-        <tbody>
-          {mappedBasket}
-        </tbody>
-      </table>
+    let basketClass = 'basket__container';
+    if (basket.open) {
+      basketClass += ' basket__container-open';
+    }
+
+    return <div class={basketClass}>
+      <h3>Basket</h3> <button class="button button__close" onClick={this.toggleDrawer.bind(this)}>Close</button>
+      <ul class="basket__list">
+        {mappedBasket}
+      </ul>
       <Status />
     </div>
   }

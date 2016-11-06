@@ -28,8 +28,6 @@ export default class Total extends React.Component {
   }
 
   render() {
-    return <td>
-      <button type="button" class="btn btn-danger btn-block" onClick={this.clear.bind(this)}>Clear</button>
-    </td>
+    return <button type="button" class="btn btn-danger btn-block" onClick={this.clear.bind(this)}>Clear</button>
   }
 }
