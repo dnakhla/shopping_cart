@@ -74,7 +74,7 @@ export default class basket extends React.Component {
 
     return <div class={basketClass}>
       <div class="basket__header">
-        <h3>Basket</h3> <button class="button basket__close" onClick={this.toggleDrawer.bind(this)}>Close</button>
+        <h2>Your Basket</h2> <button class="button basket__close" onClick={this.toggleDrawer.bind(this)}>Close</button>
       </div>
       <ul class="basket__list">
         {mappedBasket}

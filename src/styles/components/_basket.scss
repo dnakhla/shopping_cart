@@ -14,8 +14,10 @@
 .basket__header {
   display: flex;
   flex-direction: row;
+  border-bottom: 1px solid black;
+  padding-bottom: 10px;
 
-  h3 {
+  h2 {
     flex-grow: 1;
   }
 }

@@ -3,7 +3,6 @@
 
 .product__container {
   margin: 0 auto;
-  border: red solid 1px;
   max-width: 320px;
 
   @include breakpoint($tablet-portrait) {

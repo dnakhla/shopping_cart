@@ -40,9 +40,9 @@ export default class Discounts extends React.Component {
     if (basket.appliedDiscount === 0) {
       valid = 'discount__form'
     } else if (basket.appliedDiscount === 1) {
-      valid = 'discount__form-error'
+      valid = 'discount__form discount__form-error'
     } else if (basket.appliedDiscount === 2) {
-      valid = 'discount__form-success'
+      valid = 'discount__form discount__form-success'
     }
 
     return <div class="discount">
