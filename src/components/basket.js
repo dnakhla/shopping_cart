@@ -1,7 +1,10 @@
 import React from "react";
-import {connect} from 'react-redux'
+import {connect} from 'react-redux';
 
-import Status from './status' // Status Component - contains total and dscounts
+import Discount from './discount';
+import Total from './total' // Displays total
+import Clear from './clear' // Clear button component with methods
+
 
 /**
  * Importing methods to be used within component
@@ -42,17 +45,24 @@ export default class basket extends React.Component {
 
   render() {
     const {basket} = this.props; // init basket from state
+
     let mappedBasket
     if (basket) {
       mappedBasket = basket.basket.map(product => {
+
+        const backgroundImage = {
+          backgroundImage: 'url(' + product.image + ')'
+        }
         return <li key={product.id} class="basket__item" >
-          <div class="name">{product.name}</div>
-          <div>{product.quantity}</div>
-          <div>
-            <button class="button" type="submit" onClick={this.removeFromBasket.bind(this, {product})}>
-              -
-            </button>
+          <div class="basket__image" style={backgroundImage}></div>
+          <div class="basket__details">
+            <div class="basket__name">{product.name}</div>
+            <div class="basket__price">£{product.price} x {product.quantity}</div>
+            <div class="basket__quantity"></div>
           </div>
+            <a class="button basket__button" type="submit" onClick={this.removeFromBasket.bind(this, {product})}>
+              Remove
+            </a>
         </li>
       })
     }
@@ -63,11 +73,17 @@ export default class basket extends React.Component {
     }
 
     return <div class={basketClass}>
-      <h3>Basket</h3> <button class="button button__close" onClick={this.toggleDrawer.bind(this)}>Close</button>
+      <div class="basket__header">
+        <h3>Basket</h3> <button class="button basket__close" onClick={this.toggleDrawer.bind(this)}>Close</button>
+      </div>
       <ul class="basket__list">
         {mappedBasket}
       </ul>
-      <Status />
+      <div class="status">
+        <Total />
+        <Clear />
+      </div>
+      <Discount />
     </div>
   }
 }

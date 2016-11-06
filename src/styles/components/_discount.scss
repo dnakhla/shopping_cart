@@ -1,0 +1,39 @@
+@import '../global/variables';
+
+.discount {
+  display: flex;
+  margin-top: 10px;
+}
+
+.discount__form {
+  display: flex;
+  margin: 10px auto;
+  flex-grow: 1;
+
+  &-error {
+    border: red;
+
+    button {
+      border-color: red;
+      background: red;
+    }
+  }
+
+  &-success {
+
+  }
+}
+
+.discount__input {
+  flex-grow: 1;
+  border: 1px solid black;
+  border-right: 0;
+  padding: 10px;
+  font-size: $largest-font;
+}
+
+.discount__button {
+  background: $black;
+  color: $white;
+  font-weight: 300;
+}
