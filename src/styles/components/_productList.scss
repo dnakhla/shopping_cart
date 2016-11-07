@@ -48,7 +48,7 @@
   width: 350px;
   background: no-repeat center;
   background-size: 100%;
-  transition: background 0.2s ease-in-out;
+  transition: 0.3s;
   border: 3px solid black;
   box-sizing: border-box;
 
@@ -64,8 +64,6 @@
 
   &:hover {
     background-size: 110%;
-    -webkit-transition: background-image 1s ease-in-out;
-    transition: background-image 1s ease-in-out;
   }
 }
 
