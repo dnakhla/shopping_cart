@@ -21,7 +21,9 @@ export default class Heading extends React.Component {
 
   render() {
     const {basket} = this.props; // making products available from state
-    const basketLength = basket.basket.length;
+    const basketArr = basket.basket;
+    let basketLength;
+    if (basketArr) basketLength = basketArr.length;
 
     const basketTotal = '£' + basket.discountedTotal;
 

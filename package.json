@@ -4,12 +4,15 @@
   "description": "A React Redux Shopping Basket Test",
   "main": "src/js/client.js",
   "scripts": {
+    "test": "jest",
+    "test:watch": "npm test -- --watch",
     "build": "./node_modules/.bin/webpack --progress -p",
     "watch": "./node_modules/.bin/webpack-dev-server --content-base build --inline --hot"
   },
   "author": "Chris Bracewell",
   "license": "None",
   "dependencies": {
+    "babel-plugin-transform-object-rest-spread": "^6.16.0",
     "breakpoint-sass": "^2.7.0",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
@@ -17,6 +20,7 @@
   },
   "devDependencies": {
     "babel-core": "^6.17.0",
+    "babel-jest": "^16.0.0",
     "babel-loader": "^6.2.5",
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-plugin-react-html-attrs": "^2.0.0",
@@ -27,6 +31,7 @@
     "babel-preset-stage-0": "^6.16.0",
     "css-loader": "^0.25.0",
     "extract-text-webpack-plugin": "^1.0.1",
+    "jest": "^16.0.2",
     "node-sass": "^3.10.1",
     "react-hot-loader": "^3.0.0-beta.6",
     "react-redux": "^4.4.5",

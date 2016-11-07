@@ -1,3 +1,5 @@
+
+
 export default function reducer(state = {
   basket: [],
   open: false,
@@ -9,7 +11,7 @@ export default function reducer(state = {
   switch (action.type) {
     case 'LOAD_DISCOUNTS': {
       return {
-        ...state,
+        state,
         discounts: action.payload
       }
     }

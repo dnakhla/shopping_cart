@@ -47,7 +47,7 @@ export default class basket extends React.Component {
     const {basket} = this.props; // init basket from state
 
     let mappedBasket
-    if (basket) {
+    if (basket.basket) {
       mappedBasket = basket.basket.map(product => {
 
         const backgroundImage = {
