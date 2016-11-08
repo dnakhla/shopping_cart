@@ -62,9 +62,7 @@ export default class productList extends React.Component {
       if (product.stock) stock = product.stock + ' in stock';
 
       return <li class="product__item" key={index}>
-        <a onClick={this.addToBasket.bind(this)}>
-          <div class="item__image" style={backgroundImage}></div>
-        </a>
+        <div class="item__image" style={backgroundImage}></div>
         {buyButton}
         <div class="item__details">
           <div class="item__name">{product.name}</div>
