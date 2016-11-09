@@ -27,30 +27,29 @@ export default class Discounts extends React.Component {
    * @param e {object} event of change from input
    */
   handleVoucherChange(e) {
+    e.preventDefault();
     const value = e.target.value
     this.props.dispatch(setVoucher(value))
   }
 
   render() {
     const {basket} = this.props;
-    let valid = 'input-group'; // success value to be applied dependent on appliedDiscount
+    let valid = 'discount__form'; // success value to be applied dependent on appliedDiscount
 
     // Setting class for input form
     if (basket.appliedDiscount === 0) {
-      valid = 'input-group'
+      valid = 'discount__form'
     } else if (basket.appliedDiscount === 1) {
-      valid = 'input-group has-error'
+      valid = 'discount__form discount__form-error'
     } else if (basket.appliedDiscount === 2) {
-      valid = 'input-group has-success'
+      valid = 'discount__form discount__form-success'
     }
 
-    return <tr>
-      <td colSpan="2">
-        <form class={valid} style={{display: 'flex'}}>
-          <input type="text" class="form-control" style={{padding: '10px'}} name="voucher" placeholder="Voucher" onChange={this.handleVoucherChange.bind(this)} aria-describedby="basic-addon2"/>
-          <button class="btn btn-primary input-group-addon" onClick={this.setVoucher.bind(this)} id="basic-addon2" style={{width: 'auto'}}>Redeem</button>
+    return <div class="discount">
+        <form onSubmit={this.handleVoucherChange.bind(this)} class={valid}>
+          <input type="text" class="discount__input" name="voucher" placeholder="Voucher" onChange={this.handleVoucherChange.bind(this)} aria-describedby="basic-addon2"/>
+          <a class="button discount__button" onClick={this.setVoucher.bind(this)} id="basic-addon2" style={{width: 'auto'}}>Redeem</a>
         </form>
-      </td>
-    </tr>
+      </div>
   }
 }

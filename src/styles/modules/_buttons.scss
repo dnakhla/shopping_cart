@@ -1,0 +1,35 @@
+@import '../global/variables';
+
+.button {
+  box-sizing: border-box;
+  text-align: center;
+  display: block;
+  cursor: pointer;
+  border: 3px solid $black;
+  background: $white;
+  font-weight: bold;
+  color: $black;
+  font-size: $large-font;
+  min-width: 110px;
+  padding: 10px 20px;
+  transition: .2s;
+
+  &:hover {
+    background: $black;
+    color: $white;
+  }
+}
+.button-disabled {
+  pointer-events: none;
+  cursor: default;
+  border-color: $disabled;
+  color: $disabled;
+
+  &:hover {
+    pointer-events: none;
+    cursor: default;
+    border-color: $disabled;
+    color: $disabled;
+    background: $white;
+  }
+}

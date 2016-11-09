@@ -1,4 +1,4 @@
-import discounts from '../../../data/discounts' // imports discounts from data folder
+import discounts from '../../data/discounts' // imports discounts from data folder
 
 /**
  * List of exported actions which once triggered will pass payload to reducer dependent on type
@@ -53,6 +53,12 @@ export function setVoucher(value) {
 export function applyDiscount() {
   return {
     type: 'APPLY_DISCOUNT'
+  }
+}
+
+export function toggleBasket() {
+  return {
+    type: 'TOGGLE_DRAWER'
   }
 }
 
