@@ -46,7 +46,7 @@ export default class Discounts extends React.Component {
     }
 
     return <div class="discount">
-        <form class={valid}>
+        <form onSubmit={this.handleVoucherChange.bind(this)} class={valid}>
           <input type="text" class="discount__input" name="voucher" placeholder="Voucher" onChange={this.handleVoucherChange.bind(this)} aria-describedby="basic-addon2"/>
           <a class="button discount__button" onClick={this.setVoucher.bind(this)} id="basic-addon2" style={{width: 'auto'}}>Redeem</a>
         </form>
