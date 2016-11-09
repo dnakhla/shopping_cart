@@ -58,6 +58,10 @@ export default class productList extends React.Component {
         backgroundImage: 'url(' + product.image + ')'
       }
 
+      /**
+       * Handle stock output
+       * @type {string}
+       */
       let stock = 'Sold Out';
       if (product.stock) stock = product.stock + ' in stock';
 

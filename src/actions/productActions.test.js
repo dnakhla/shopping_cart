@@ -1,6 +1,6 @@
 import * as actions from './productActions';
 
-import items from '../../data/products' // imports discounts from data folder
+import items from '../../data/products' // imports discounts from data dir
 
 describe('loadProducts()', () => {
   it('should create an action to load all products', () => {

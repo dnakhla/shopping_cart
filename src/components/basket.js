@@ -1,7 +1,7 @@
 import React from "react";
 import {connect} from 'react-redux';
 
-import Discount from './discount';
+import Discount from './discount'; // Discount Compoenent
 import Total from './total' // Displays total
 import Clear from './clear' // Clear button component with methods
 
@@ -67,6 +67,9 @@ export default class basket extends React.Component {
       })
     }
 
+    /**
+     * logic to check if basket should be open, changes the class of the basket
+     */
     let basketClass = 'basket__container';
     if (basket.open) {
       basketClass += ' basket__container-open';
